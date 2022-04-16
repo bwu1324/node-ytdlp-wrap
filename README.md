@@ -17,7 +17,7 @@ const fs = require('fs');
 
 const link = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ';
 
-const stream = ytdlp.stream(link, ['-f bestvideo']);
+const stream = ytdlp.stream(link, ['-f', 'bestvideo']);
 stream.pipe(fs.createWriteStream('example.mp4'));
 ```
 # Documentation

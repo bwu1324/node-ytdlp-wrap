@@ -13,9 +13,6 @@
 		"type": "git",
 		"url": "git+https://github.com/bwu1324/node-yt-dlp.git"
 	},
-	"publishConfig": {
-		"registry": "https://npm.pkg.github.com"
-	},
 	"keywords": [
 		"yt-dlp",
 		"youtube",
