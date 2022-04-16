@@ -12,7 +12,8 @@ const ytdlp: { path: string, version: string, stream: (url: string, args: string
 };
 ytdlp.stream = (url, args) => {
 	args.splice(0, 0, url);
-	args.push('-o -');
+	args.push(...['-o', '-']);
+	args.push('--no-part');
 	args.push('--no-playlist');
 	args.push('--quiet',);
 	const downloader = spawn(ytdlp.path, args);
