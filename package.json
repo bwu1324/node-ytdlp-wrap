@@ -1,7 +1,7 @@
 {
-	"name": "node-yt-dlp",
+	"name": "node-ytdlp-wrap",
 	"version": "1.0.0",
-	"description": "Basic yt-dlp wrapper for node projects. Installs the correct binary of yt-dlp for the current platform. Supports Linux, Windows, and MacOS/X.",
+	"description": "A basic yt-dlp wrapper for node projects. Installs the correct binary of yt-dlp for the current platform. Supports Linux, Windows, and MacOS/X.",
 	"main": "./lib/index.js",
 	"scripts": {
 		"lint": "eslint ./**/*.ts",
