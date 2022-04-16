@@ -1,5 +1,5 @@
 # node-yt-dlp
-A basic yt-dlp wrapper for node projects written in Typescript. 
+A basic yt-dlp wrapper written in Typescript for Node projects. 
 
 Installs the correct binary of yt-dlp for the current platform. Supports Linux, Windows, and MacOS/X.
 
