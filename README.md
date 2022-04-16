@@ -6,13 +6,13 @@ Installs the correct binary of yt-dlp for the current platform. Supports Linux, 
 # Installation
 Install with [npm](https://www.npmjs.com/):
 ```
-$ npm --save i node-yt-dlp
+$ npm --save i node-ytdlp-wrap
 ```
 
 # Usage Example
 Downloads a video from youtube and saves it as 'example.mp4'
 ```
-const ytdlp = require('node-yt-dlp');
+const ytdlp = require('node-ytdlp-wrap');
 const fs = require('fs');
 
 const link = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ';
