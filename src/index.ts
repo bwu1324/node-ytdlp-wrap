@@ -22,6 +22,8 @@ class Downloader {
 	}
 
 	Abort() {
+		this.downloader_.stdin.destroy();
+		this.downloader_.stdout.destroy();
 		this.downloader_.kill('SIGINT');
 	}
 }

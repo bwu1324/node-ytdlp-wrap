@@ -9,7 +9,7 @@
 	"scripts": {
 		"lint": "eslint ./**/*.ts",
 		"build": "tsc -b",
-		"prepare": "npm run build && node ./lib/install",
+		"prepare": "npm run build",
 		"postinstall": "node ./lib/install"
 	},
 	"repository": {
