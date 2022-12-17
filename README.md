@@ -76,7 +76,7 @@ setTimeout(() => {
 
 ## ytdlp Methods
 ### ytdlp.downloader(link, [optional args]) 
-Spawns YT-DLP to download the given link using the args given and returns [YtdlpDownloader](#YtdlpDownloader).
+Spawns YT-DLP to download the given link using the args given and returns [YtdlpDownloader](#YtdlpDownloader-Methods).
 For a list of avaliable arguments, see [YT-DLP Options](https://github.com/yt-dlp/yt-dlp/blob/master/README.md#usage-and-options)
 
 
