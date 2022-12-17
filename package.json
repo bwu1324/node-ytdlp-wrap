@@ -3,6 +3,9 @@
 	"version": "1.0.4",
 	"description": "A basic yt-dlp wrapper for node projects. Installs the correct binary of yt-dlp for the current platform. Supports Linux, Windows, and MacOS/X.",
 	"main": "./lib/index.js",
+	"files": [
+		"./lib"
+	],
 	"scripts": {
 		"lint": "eslint ./**/*.ts",
 		"build": "tsc -b",
