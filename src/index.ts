@@ -3,9 +3,10 @@ import path from 'path';
 import { ChildProcessWithoutNullStreams, spawn } from 'child_process';
 import { PassThrough } from 'stream';
 
-class Downloader {
+export class YtdlpDownloader {
 	private downloader_: ChildProcessWithoutNullStreams;
 	private output_: PassThrough;
+	private aborted_ = false;
 
 	get stream() { return this.output_; }
 
@@ -22,6 +23,8 @@ class Downloader {
 	}
 
 	Abort() {
+		if (this.aborted_) return;
+		this.aborted_ = true;
 		this.downloader_.stdin.destroy();
 		this.downloader_.stdout.destroy();
 		this.downloader_.kill('SIGINT');
@@ -33,13 +36,13 @@ const meta = JSON.parse(fs.readFileSync(path.join(__dirname, 'meta.json'), 'utf-
 const ytdlp: {
 	path: string,
 	version: string,
-	downloader: (url: string, args: string[]) => Downloader,
+	downloader: (url: string, args: string[]) => YtdlpDownloader,
 	stream: (url: string, args: string[]) => PassThrough
 } = {
 	path: meta.path,
 	version: meta.version,
 	downloader: (url, args) => {
-		return new Downloader(url, args);
+		return new YtdlpDownloader(url, args);
 	},
 	stream: (url, args) => {
 		args.splice(0, 0, url);
